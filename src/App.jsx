@@ -4,7 +4,9 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0);
+const handleLogin=()=>{
+  window.location.href = "http://localhost:5000/auth/google"; 
+}
 
   return (
     <>
@@ -12,7 +14,7 @@ function App() {
         Testing oAuth With Passport
       </h1>
       <div className="flex justify-center items-center gap-6 mt-6">
-        <button className="btn btn-error text-white">Login With Google</button>
+        <button onClick={handleLogin} className="btn btn-error text-white">Login With Google</button>
       </div>
     </>
   );
